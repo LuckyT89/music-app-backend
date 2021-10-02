@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get 'songs', to: 'songs#index'# get all songs
   get '/albums/:album_id/songs', to: 'albums#songs_index' # get all songs from a given album id
 
+  resources :songs, only: [:create, :destroy, :update]
 end
